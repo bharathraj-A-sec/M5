@@ -14,9 +14,9 @@ Write a C program to convert a 23.65 into 25 using pointer
 
 int main() {
     double num = 23.65;
-    double *ptr = &num;
+    double *pr = &num;
     
-    *ptr = 25.0;
+    *pr = 25.0;
     
     printf("Modified value: %.2f\n", num);
     
