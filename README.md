@@ -145,40 +145,39 @@ Write C program for the below pyramid string pattern. Enter a string: PROGRAM En
 
 ## PROGRAM:
 ```
-#include <stdio.h>
-
-int main() {
-    int num_rows;
-
-    // Input the number of rows for the pyramid
-    printf("Enter the number of rows for the pyramid: ");
-    scanf("%d", &num_rows);
-
-    // Initialize variables
-    int i, j;
-    int midpoint = (2 * num_rows - 1) / 2; // Calculate the midpoint position
-
-    // Loop for each row of the pyramid
-    for (i = 1; i <= num_rows; i++) {
-        // Print spaces before stars
-        for (j = 1; j <= midpoint - (i - 1); j++) {
+#include<stdio.h>
+int main(){
+    int row;
+    char str[40];
+    printf("Enter the number of rows : ");
+    scanf("%d",&row);
+    printf("Enter the string: ");
+    scanf("%s",str);
+    int sp=10;
+    int k=0;
+    int y=0;
+    for(int i=1;i<=row;i++){
+        for(int space=1;space<=sp;space++){
             printf(" ");
         }
-        // Print stars
-        for (j = 1; j <= (2 * i - 1); j++) {
-            printf("*");
+        for(int j=0;j<=y;j++){
+            printf("%c",str[k]);
+            k++;
+            if(str[k]=='\0')
+               k=0;
         }
         printf("\n");
+        sp-=1;
+        y+=2;
     }
-
     return 0;
 }
-
 ```
 
 
  ## OUTPUT
- ![image](https://github.com/user-attachments/assets/dafeac19-e51c-4531-80e2-5bc2b261a280)
+ ![image](https://github.com/user-attachments/assets/c1ccec38-48e5-4368-9f72-9761c62c0d29)
+
 
 
  
